@@ -1,0 +1,1 @@
+deno run --allow-net --allow-run --allow-read --allow-write --inspect server.js mode:local

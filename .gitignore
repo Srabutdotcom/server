@@ -1,0 +1,26 @@
+# ignore all files with dot name in its first character
+.*
+# except .gitignore itself
+!.gitignore
+# ignore all directories and its files
+/*/
+# except files in current directory
+!*/
+# except client, database, and server
+!serv/.gitkeep
+!database/.gitkeep
+!client/.gitkeep
+test.kv
+test.kv-shm
+test.kv-wal
+user.kv
+user.kv-shm
+user.kv-wal
+.vscode/settings.json
+serv/**/*
+database/*
+client/*
+serv/library/importir
+serv/library/path
+serv/library/tofromblob
+serv/router
