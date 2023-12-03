@@ -13,12 +13,20 @@ import { httpsHandler } from "./serv/router/router.js";
 const certificatesPath = new Map([
   ['aicone.id', "../../etc/letsencrypt/live/aicone.id/fullchain.pem"],
   ['dev.aicone.id', "../../etc/letsencrypt/live/dev.aicone.id/fullchain.pem"],
+  /**!SECTION for alma.aicone.id
+   * '../../etc/ssl/freessl/certificate.crt' --> created using https://www.sslforfree.com/
+   */
+  ['alma.aicone.id','../../etc/letsencrypt/live/alma.aicone.id/fullchain.pem'],
   ['localhost', "../../../localcertificate/localhost+1.pem"]
 ])
 
 const keysPath = new Map([
   ['aicone.id', "../../etc/letsencrypt/live/aicone.id/privkey.pem"],
   ['dev.aicone.id', "../../etc/letsencrypt/live/dev.aicone.id/privkey.pem"],
+  /**!SECTION for alma.aicone.id
+   * '../../etc/ssl/freessl/private.key' --> created using https://www.sslforfree.com/
+   */
+  ['alma.aicone.id', '../../etc/letsencrypt/live/alma.aicone.id/privkey.pem'],
   ['localhost', "../../../localcertificate/localhost+1-key.pem"]
 ])
 
