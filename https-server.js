@@ -4,6 +4,8 @@
 import { HTTPSPORT, HOSTNAME } from './meta.js';
 import { httpsHandler } from "./serv/router/router.js";
 //import './serv/library/importir/testimportir.js';
+//import './serv/library/tofromblob/test/savefiletest.js';
+import './serv/library/tofromblob/test/testMap.js';
 
 /**
  * to create local certificate pls refer to https://github.com/FiloSottile/mkcert

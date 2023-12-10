@@ -1,4 +1,4 @@
-export const baseUrl = new URL('',import.meta.url)
+export const baseUrl = new URL('',import.meta.url);
 // will return url in the browser or filepath,
 // in this file will return filepath 
 //console.debug('baseUrl:', baseUrl);
