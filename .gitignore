@@ -9,7 +9,7 @@
 # except client, database, and server
 !serv/.gitkeep
 !serv/library/.gitkeep
-client/importir.js
+client/
 test.kv
 test.kv-shm
 test.kv-wal
@@ -22,5 +22,7 @@ serv/database/
 serv/forclient/
 serv/library/*/
 serv/library/*/
+serv/library/importir
+serv/library/tofromblob
 serv/logger/
 serv/router/
