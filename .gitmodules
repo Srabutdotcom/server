@@ -1,0 +1,31 @@
+[submodule "importir"]
+    path = serv/library/importir
+    url = https://github.com/Srabutdotcom/importir.git
+
+[submodule "path"]
+    path = serv/library/path
+    url = https://github.com/Srabutdotcom/path.git
+
+[submodule "tofromblob"]
+    path = serv/library/tofromblob
+    url = https://github.com/Srabutdotcom/tofromblob.git
+
+[submodule "logger"]
+    path = serv/logger
+    url = https://github.com/Srabutdotcom/logger.git
+
+[submodule "router"]
+    path = serv/router
+    url = https://github.com/Srabutdotcom/router.git
+
+[submodule "html-dom"]
+    path = serv/library/html-dom
+    url = https://github.com/Srabutdotcom/html-dom.git
+
+[submodule "client"]
+    path = client
+    url = https://github.com/Srabutdotcom/client.git
+
+[submodule "forclient"]
+    path = serv/forclient
+    url = https://github.com/Srabutdotcom/forclient.git

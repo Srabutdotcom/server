@@ -2,6 +2,7 @@
 .*
 # except .gitignore itself
 !.gitignore
+!.gitmodules
 # ignore all directories and its files
 # /*/
 # except files in current directory
