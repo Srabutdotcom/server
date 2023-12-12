@@ -9,7 +9,6 @@
 # except client, database, and server
 !serv/.gitkeep
 !serv/library/.gitkeep
-client/
 test.kv
 test.kv-shm
 test.kv-wal
@@ -19,8 +18,5 @@ user.kv-wal
 .vscode/settings.json
 database/
 serv/database/
-serv/forclient/
 serv/library/*/
 serv/library/*/
-serv/library/importir
-serv/library/tofromblob
