@@ -3,13 +3,13 @@
 # except .gitignore itself
 !.gitignore
 # ignore all directories and its files
-/*/
+# /*/
 # except files in current directory
-!*/
+# !*/
 # except client, database, and server
 !serv/.gitkeep
-!database/.gitkeep
-!client/.gitkeep
+!serv/library/.gitkeep
+client/importir.js
 test.kv
 test.kv-shm
 test.kv-wal
@@ -17,10 +17,10 @@ user.kv
 user.kv-shm
 user.kv-wal
 .vscode/settings.json
-serv/**/*
-database/*
-client/*
-serv/library/importir
-serv/library/path
-serv/library/tofromblob
-serv/router
+database/
+serv/database/
+serv/forclient/
+serv/library/*/
+serv/library/*/
+serv/logger/
+serv/router/
