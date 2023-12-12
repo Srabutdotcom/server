@@ -24,5 +24,3 @@ serv/library/*/
 serv/library/*/
 serv/library/importir
 serv/library/tofromblob
-serv/logger/
-serv/router/
