@@ -8,8 +8,6 @@
 # except files in current directory
 # !*/
 # except client, database, and server
-!serv/.gitkeep
-!serv/library/.gitkeep
 test.kv
 test.kv-shm
 test.kv-wal
