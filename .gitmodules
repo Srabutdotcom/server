@@ -29,3 +29,7 @@
 [submodule "forclient"]
     path = serv/forclient
     url = https://github.com/Srabutdotcom/forclient.git
+
+[submodule "aids"]
+    path = serv/library/aids
+    url = https://github.com/Srabutdotcom/aids.git

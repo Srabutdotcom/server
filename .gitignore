@@ -19,3 +19,4 @@ database/
 serv/database/
 serv/library/*/
 serv/library/*/
+client/*
