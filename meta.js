@@ -35,7 +35,7 @@ const MODE = args.get('mode') ?? 'local';
 const ROOT = args.get('root') ?? './client';
 const HTTPPORT = MODE === 'live' ? 80 : args.get('httpPort') ?? 8001;
 const HTTPSPORT = MODE === 'live' ? 443 :args.get('httpsPort') ?? 4000;
-const HOSTNAME = MODE === 'live' ? 'aicone.id': args.get('hostname') ?? 'localhost';
+const HOSTNAME = MODE === 'live' ? Deno.hostname(): args.get('hostname') ?? 'localhost';
 
 // store sessionId
 sessionStorage.setItem("session", crypto.randomUUID());
