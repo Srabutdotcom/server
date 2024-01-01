@@ -1,11 +1,8 @@
 //deno run --allow-all --inspect-wait https-server.js MODE:local 
 //deno run --allow-all --unstable --inspect-wait https-server.js MODE:local
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import.meta
-import { HTTPSPORT, HOSTNAME } from './meta.js';
-import { httpsHandler } from "./serv/router/router.js";
-//import './serv/library/importir/testimportir.js';
-//import './serv/library/tofromblob/test/savefiletest.js';
-import './serv/library/tofromblob/test/testMap.js';
+import { HTTPSPORT, HOSTNAME, baseUrl } from './meta.js';
+import { httpsHandler } from "./router/router.js";
 
 /**
  * to create local certificate pls refer to https://github.com/FiloSottile/mkcert
@@ -13,23 +10,13 @@ import './serv/library/tofromblob/test/testMap.js';
  * to create live certificate pls use letsencrypt
  */
 const certificatesPath = new Map([
-  [HOSTNAME, `../../etc/letsencrypt/live/${HOSTNAME}/fullchain.pem`],
-  //['dev.aicone.id', "../../etc/letsencrypt/live/dev.aicone.id/fullchain.pem"],
-  /**!SECTION for alma.aicone.id
-   * '../../etc/ssl/freessl/certificate.crt' --> created using https://www.sslforfree.com/
-   */
-  //['alma.aicone.id','../../etc/letsencrypt/live/alma.aicone.id/fullchain.pem'],
-  ['localhost', "../../../localcertificate/localhost+1.pem"]
+  [HOSTNAME, new URL(`../../etc/letsencrypt/live/${HOSTNAME}/fullchain.pem`,baseUrl)],
+  ['localhost', new URL("./certificate/localhost+1.pem",baseUrl)]
 ])
 
 const keysPath = new Map([
-  [HOSTNAME, `../../etc/letsencrypt/live/${HOSTNAME}/privkey.pem`],
-  //['dev.aicone.id', "../../etc/letsencrypt/live/dev.aicone.id/privkey.pem"],
-  /**!SECTION for alma.aicone.id
-   * '../../etc/ssl/freessl/private.key' --> created using https://www.sslforfree.com/
-   */
-  //['alma.aicone.id', '../../etc/letsencrypt/live/alma.aicone.id/privkey.pem'],
-  ['localhost', "../../../localcertificate/localhost+1-key.pem"]
+  [HOSTNAME, new URL(`../../etc/letsencrypt/live/${HOSTNAME}/privkey.pem`,baseUrl)],
+  ['localhost', new URL("./certificate/localhost+1-key.pem", baseUrl)]
 ])
 
 Deno.serve({

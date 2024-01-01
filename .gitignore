@@ -20,3 +20,5 @@ serv/database/
 serv/library/*/
 serv/library/*/
 client/*
+certificate/
+router/
