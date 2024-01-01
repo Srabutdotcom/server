@@ -18,7 +18,7 @@ export const baseUrl = new URL('',import.meta.url);
 const args = new Map();
 //default constant
 args.set('mode', 'local')
-args.set('root', './client')
+args.set('root', '../client')
 args.set('httpPort', 8001)
 args.set('httpsPort', 4000)
 args.set('hostname', 'localhost')
@@ -32,13 +32,13 @@ if (Deno.args.length) {
 }
 
 const MODE = args.get('mode') ?? 'local';
-const ROOT = args.get('root') ?? './client';
+const ROOT = args.get('root') ?? '../client';
 const HTTPPORT = MODE === 'live' ? 80 : args.get('httpPort') ?? 8001;
 const HTTPSPORT = MODE === 'live' ? 443 :args.get('httpsPort') ?? 4000;
 const HOSTNAME = MODE === 'live' ? Deno.hostname(): args.get('hostname') ?? 'localhost';
 
 // store sessionId
-sessionStorage.setItem("session", crypto.randomUUID());
+//sessionStorage.setItem("session", crypto.randomUUID());
 
 export { ROOT, MODE, HTTPPORT, HTTPSPORT, HOSTNAME };
 

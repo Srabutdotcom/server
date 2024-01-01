@@ -2,7 +2,7 @@
 //deno run --allow-all --unstable --inspect-wait https-server.js MODE:local
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import.meta
 import { HTTPSPORT, HOSTNAME, baseUrl } from './meta.js';
-import { httpsHandler } from "./router/router.js";
+import { httpsHandler } from '../router/router.js';//"./router/router.js";
 
 /**
  * to create local certificate pls refer to https://github.com/FiloSottile/mkcert
