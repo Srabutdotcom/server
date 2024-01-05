@@ -24,4 +24,4 @@ Deno.serve({
   hostname: HOSTNAME, 
   cert: Deno.readTextFileSync(certificatesPath.get(HOSTNAME)),
   key: Deno.readTextFileSync(keysPath.get(HOSTNAME)),
-}, httpsHandler);
+}, httpsHandler.handle);

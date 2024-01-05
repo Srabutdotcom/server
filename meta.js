@@ -22,6 +22,7 @@ args.set('root', '../client')
 args.set('httpPort', 8001)
 args.set('httpsPort', 4000)
 args.set('hostname', 'localhost')
+args.set('protocol', 'https')
 
 if (Deno.args.length) {
   Deno.args.map((e) => {
@@ -36,9 +37,10 @@ const ROOT = args.get('root') ?? '../client';
 const HTTPPORT = MODE === 'live' ? 80 : args.get('httpPort') ?? 8001;
 const HTTPSPORT = MODE === 'live' ? 443 :args.get('httpsPort') ?? 4000;
 const HOSTNAME = MODE === 'live' ? Deno.hostname(): args.get('hostname') ?? 'localhost';
+const PROTOCOL = args.get('protocol');
 
 // store sessionId
 //sessionStorage.setItem("session", crypto.randomUUID());
 
-export { ROOT, MODE, HTTPPORT, HTTPSPORT, HOSTNAME };
+export { ROOT, MODE, HTTPPORT, HTTPSPORT, HOSTNAME, PROTOCOL };
 

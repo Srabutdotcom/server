@@ -7,5 +7,5 @@ Deno.serve({
    port: HTTPPORT, 
    hostname: HOSTNAME, 
 },
-   httpHandler
+   httpHandler.handle
 );
