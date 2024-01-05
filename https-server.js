@@ -2,7 +2,7 @@
 //deno run --allow-all --unstable --inspect-wait https-server.js MODE:local
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import.meta
 import { HTTPSPORT, HOSTNAME, baseUrl } from './meta.js';
-import { httpsHandler } from './deps.js';//"./router/router.js";
+import { handler } from './deps.js';//"./router/router.js";
 
 /**
  * to create local certificate pls refer to https://github.com/FiloSottile/mkcert
@@ -24,4 +24,4 @@ Deno.serve({
   hostname: HOSTNAME, 
   cert: Deno.readTextFileSync(certificatesPath.get(HOSTNAME)),
   key: Deno.readTextFileSync(keysPath.get(HOSTNAME)),
-}, httpsHandler.handle);
+}, handler.handle);

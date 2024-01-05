@@ -1,1 +1,1 @@
-export { httpHandler, httpsHandler } from '../router/mod.js';
+export { handler } from '../router/mod.js';
